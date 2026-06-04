@@ -9,6 +9,8 @@ A super simple FastAPI application that allows students to view and sign up for 
 
 ## Getting Started
 
+Run the following commands from the `src/` directory.
+
 1. Install the dependencies:
 
    ```
