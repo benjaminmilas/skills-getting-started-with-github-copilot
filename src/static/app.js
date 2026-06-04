@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showMessage(text, type = "success") {
     messageDiv.textContent = text;
-    messageDiv.className = type;
+    messageDiv.className = `message ${type}`;
     messageDiv.classList.remove("hidden");
 
     clearTimeout(Number(messageDiv.dataset.hideTimerId || 0));
