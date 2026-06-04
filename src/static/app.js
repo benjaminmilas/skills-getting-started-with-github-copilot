@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
     messageDiv.className = type;
     messageDiv.classList.remove("hidden");
 
-    setTimeout(() => {
-      messageDiv.classList.add("hidden");
-    }, 5000);
+    clearTimeout(Number(messageDiv.dataset.hideTimerId || 0));
+    messageDiv.dataset.hideTimerId = String(
+      setTimeout(() => messageDiv.classList.add("hidden"), 5000)
+    );
   }
 
   function escapeHtml(value) {
